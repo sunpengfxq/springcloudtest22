@@ -1,0 +1,28 @@
+
+server:
+  port: 8084
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+spring:
+  application:
+    name: service-feign
+  main:
+    allow-bean-definition-overriding: true
+ribbon:
+  eureka:
+    enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+    enabled: true
+    cache: false
+
+
