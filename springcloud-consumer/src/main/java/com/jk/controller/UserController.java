@@ -26,6 +26,7 @@ public class UserController {
     @GetMapping("queryGoodsList")
     public List<User> queryGoodsList(){
 
+        System.out.println(111);
         return userService.queryGoodsList();
     }
 }
